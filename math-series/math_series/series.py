@@ -8,7 +8,10 @@ def sum_series(nth,f=0,s=1):
     return lucas(nth)
   else:
     # pass
-    return fibonacci(nth)
+    return other_series(nth,f,s)
+
+
+
 
 
 
@@ -25,6 +28,13 @@ def lucas(n):
   if (n == 1) :
         return 1
   return lucas(n - 1) +lucas(n - 2) 
-
+  
+def other_series(nth,f,s):
+  if (nth == s) :
+        return s 
+  if (nth == f) :
+        return f
+  else:
+       return(other_series(nth-1,f,s) + other_series(nth-2,f,s))
 
 # print(sum_series(7,2,1))
