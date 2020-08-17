@@ -1,4 +1,4 @@
-from math_series.series import sum_series,fibonacci,lucas,other_series
+from math_series.series import sum_series,fibonacci,lucas
 
 def test_one():
     expected = 13
@@ -31,4 +31,9 @@ def test_five():
 def test_six():
     expected = 18
     actual = sum_series(7,3,4)
+    assert actual == expected
+
+def test_seven():
+    expected = 8
+    actual = sum_series(5,2,3)
     assert actual == expected

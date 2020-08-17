@@ -1,18 +1,23 @@
 def sum_series(nth,f=0,s=1):
   if f < 0 or nth < 0 or s< 0:
     print("wronge input ,enter a positive num please")
-  elif f==0:
+  elif f==0 and s==1:
     return fibonacci(nth)
   
-  elif f==2:
+  elif f==2 and s==1:
     return lucas(nth)
   else:
     # pass
-    return other_series(nth,f,s)
-
-
-
-
+    # return other_series(nth,f,s)
+    if f < s:
+      if (nth == s) :
+          return s 
+      elif (nth == f) :
+          return f
+      else:
+        return(sum_series(nth-1,f,s) + sum_series(nth-2,f,s))
+    else :
+      return 'invaild input second value>first value'
 
 
 def fibonacci(n):
@@ -29,12 +34,12 @@ def lucas(n):
         return 1
   return lucas(n - 1) +lucas(n - 2) 
   
-def other_series(nth,f,s):
-  if (nth == s) :
-        return s 
-  if (nth == f) :
-        return f
-  else:
-       return(other_series(nth-1,f,s) + other_series(nth-2,f,s))
+# def other_series(nth,f,s):
+  # if (nth == s) :
+  #       return s 
+  # if (nth == f) :
+  #       return f
+  # else:
+  #      return(other_series(nth-1,f,s) + other_series(nth-2,f,s))
 
 # print(sum_series(7,2,1))
