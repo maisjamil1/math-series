@@ -9,7 +9,7 @@
 <br>
 <hr>
 # RP Link:
-## https://github.com/3madov-77/snakes-cafe/pull/2
+## https://github.com/maisjamil1/math-series/pull/1
 <br>
 <hr>
 # Notes:
